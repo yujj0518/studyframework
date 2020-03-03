@@ -16,4 +16,9 @@ public class Father implements IPerson {
         target.findLove();
         System.out.println("找好了，准备结婚~~~~");
     }
+
+    @Override
+    public void findLoveParam(String condition) {
+
+    }
 }

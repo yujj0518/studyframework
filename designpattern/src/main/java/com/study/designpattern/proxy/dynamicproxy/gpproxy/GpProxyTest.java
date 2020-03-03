@@ -8,5 +8,6 @@ public class GpProxyTest {
     public static void main(String[] args) {
         IPerson proxy = (IPerson) new GpMeipo().getInstance(new Girl());
         proxy.findLove();
+        proxy.findLoveParam("我是有条件的");
     }
 }

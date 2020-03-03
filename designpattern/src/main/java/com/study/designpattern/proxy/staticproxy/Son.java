@@ -7,4 +7,9 @@ public class Son implements IPerson {
     public void findLove() {
         System.out.println("儿子找对象：肤白貌美大长腿！");
     }
+
+    @Override
+    public void findLoveParam(String condition) {
+        System.out.println("condition = [" + condition + "]");
+    }
 }

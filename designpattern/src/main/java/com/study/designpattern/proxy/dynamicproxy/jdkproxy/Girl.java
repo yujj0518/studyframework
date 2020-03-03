@@ -7,4 +7,9 @@ public class Girl implements IPerson {
     public void findLove(){
         System.out.println("女孩找对象，高富帅~~~");
     }
+
+    @Override
+    public void findLoveParam(String condition) {
+        System.out.println("condition = [" + condition + "]");
+    }
 }
