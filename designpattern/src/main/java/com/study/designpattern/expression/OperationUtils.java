@@ -45,7 +45,7 @@ public class OperationUtils {
      * @param operStack 操作符栈
      * @param curOper 当前操作符
      */
-    public static void doMatch(Stack<IArithmeticInterpreter> dataStack, Stack<String> operStack, char curOper ){
+    public static void doMatch(Stack<IArithmeticInterpreter> dataStack, Stack<String> operStack, char curOper){
         if( operStack.isEmpty() ){
             operStack.push( String.valueOf(curOper) );
             return;
@@ -74,21 +74,21 @@ public class OperationUtils {
 
     /**
      * 是否数字
-     *
-     * @param ch 数字参数
      * @return
      */
-    public static boolean isDigit(char ch) {
+    public static boolean isDigit(String str) {
+        if (str == null || str == "")   return false;
+        char ch = str.charAt(0);
         return ch >= '0' && ch <= '9';
     }
 
     /**
      * 是否操作符
-     *
-     * @param op 操作符
      * @return
      */
-    public static boolean isOperator(char op){
+    public static boolean isOperator(String str){
+        if (str == null || str == "")   return false;
+        char op = str.charAt(0);
         for(String ops : OPERATOR_PRIORITY ){
             if( ops.indexOf(op) != -1 ) {
                 return true;

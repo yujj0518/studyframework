@@ -17,10 +17,9 @@ public class Calculator {
         String[] expressionArr = expression.split(" ");
         for (int i = 0; i < expressionArr.length; i++) {
             String exp = expressionArr[i];
-            if (OperationUtils.isDigit(exp.charAt(0))) {
+            if (OperationUtils.isDigit(exp)) {
                 dataStack.push(new NumInterpreter(Integer.valueOf(exp)));
-            } else if (OperationUtils.isOperator(exp.charAt(0) ) ) {
-
+            } else if (OperationUtils.isOperator(exp)) {
                 //处理操作符
                 if (operStack.isEmpty()) {
                     operStack.push(exp);
