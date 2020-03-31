@@ -36,7 +36,7 @@ public class Calculator {
         }
         while (operStack.size() > 0) {
             String preOp = operStack.peek();
-            if( "(".equals(preOp) ){
+            if("(".equals(preOp) ){
                 operStack.pop();
                 continue;
             }
